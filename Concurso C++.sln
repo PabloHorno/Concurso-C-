@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fibonacci", "Fibonacci\Fibo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pruebas", "Pruebas\Pruebas.vcxproj", "{07213E20-9F3E-4DBF-80E8-0AEA97A2C630}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Snack Vendor", "Snack Vendor\Snack Vendor.vcxproj", "{4015F398-8A93-43EB-8244-E16BBDB50707}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +123,16 @@ Global
 		{07213E20-9F3E-4DBF-80E8-0AEA97A2C630}.Release|x64.Build.0 = Release|x64
 		{07213E20-9F3E-4DBF-80E8-0AEA97A2C630}.Release|x86.ActiveCfg = Release|Win32
 		{07213E20-9F3E-4DBF-80E8-0AEA97A2C630}.Release|x86.Build.0 = Release|Win32
+		{4015F398-8A93-43EB-8244-E16BBDB50707}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{4015F398-8A93-43EB-8244-E16BBDB50707}.Debug|x64.ActiveCfg = Debug|x64
+		{4015F398-8A93-43EB-8244-E16BBDB50707}.Debug|x64.Build.0 = Debug|x64
+		{4015F398-8A93-43EB-8244-E16BBDB50707}.Debug|x86.ActiveCfg = Debug|Win32
+		{4015F398-8A93-43EB-8244-E16BBDB50707}.Debug|x86.Build.0 = Debug|Win32
+		{4015F398-8A93-43EB-8244-E16BBDB50707}.Release|Any CPU.ActiveCfg = Release|Win32
+		{4015F398-8A93-43EB-8244-E16BBDB50707}.Release|x64.ActiveCfg = Release|x64
+		{4015F398-8A93-43EB-8244-E16BBDB50707}.Release|x64.Build.0 = Release|x64
+		{4015F398-8A93-43EB-8244-E16BBDB50707}.Release|x86.ActiveCfg = Release|Win32
+		{4015F398-8A93-43EB-8244-E16BBDB50707}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,7 @@
 using namespace std;
 void main()
 {
-	cout << fixed << setprecision(20);
-	cout << 0.00000000001 << endl;
+	char a = '3';
+	cout << (int)a << endl;
 	system("pause");
 }
