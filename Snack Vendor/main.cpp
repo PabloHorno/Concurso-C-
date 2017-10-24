@@ -14,31 +14,25 @@ void main()
 	{
 		SnakVending maquina;
 		string tam_rejilla,seleccion;
-		int num_monedas;
+		int num_monedas, num_clientes;
 		cin >> tam_rejilla;
 		maquina.set_filas_columnas(tam_rejilla);
-		cout << maquina.num_filas*maquina.num_columnas;
-		maquina.get_precios(cin);
-		cout << "PRECIOS" << endl;
-		for (auto filaprecios : maquina.precios) {
 
-			for (auto precio : filaprecios)
-				cout << precio << " ";
-			cout << endl;
-		}
-		cout << endl;
+		cin >> maquina.inicio >> maquina.llegada;
+		cout << "Tiempo entre casillas " << maquina.inicio << " " << maquina.llegada << " es de " << maquina.tiempo_entre_casillas() << endl;
 
-		cin >> seleccion >> num_monedas;
-		vector<int> monedas;
-		for (int i = 0; i < num_monedas; i++)
+		//maquina.get_productos(cin);
+		
+		/*cin >> num_clientes;
+		for (int i = 0; i < num_clientes; i++)
 		{
-			int moneda;
-			cin >> moneda;
-			maquina.monedas.push_back(moneda);
+			string code;
+			cin >> code;
+			maquina.clientes.push_back(code);
 		}
 
-		maquina.precio = maquina.precio_producto(seleccion);
-		cout << "PRECIO DEL PRODUCTO (" << seleccion << ") " << maquina.precio << endl;
+		cout << maquina.revenue();
+		/*
 		cout << maquina.cambio() << endl;
 		if (maquina.cambio() < 0)
 			cout << "MISSING " << -maquina.cambio() << endl;
@@ -48,6 +42,6 @@ void main()
 			for (auto cambio : maquina.devolucion_monedas())
 				cout << cambio << " ";
 			cout << endl;
-		}
+		}*/
 	}
 }

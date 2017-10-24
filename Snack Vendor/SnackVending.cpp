@@ -20,7 +20,7 @@ vector<int> SnakVending::devolucion_monedas()
 	int devolucion = this->cambio();
 	while (devolucion != 0)
 	{
-		for (int i = valor_monedas.size()-1; i >=0; i--)
+		for (int i = valor_monedas.size() - 1; i >= 0; i--)
 		{
 			if (valor_monedas.at(i) <= devolucion)
 			{
@@ -35,39 +35,75 @@ vector<int> SnakVending::devolucion_monedas()
 
 void SnakVending::set_filas_columnas(string ultima_casilla)
 {
-	auto pos = code_to_pos(ultima_casilla);
-	this->num_filas = pos.first;
-	this->num_columnas = pos.second;
-	cout << "Filas: " << num_filas << " Columnas: " << num_columnas<< endl;
+	letra_maxima = *ultima_casilla.substr(0, 1).c_str();
+	this->num_columnas = stoi(ultima_casilla.substr(1, ultima_casilla.size()));
+
+	cout << "Filas: " << letra_maxima << " Columnas: " << num_columnas << endl;
 }
 
-int SnakVending::precio_producto(string code)
+void SnakVending::get_productos(istream & cin)
 {
-	auto pos = code_to_pos(code);
-	return precios[pos.first-1][pos.second-1];
-}
-
-pair<int, int> SnakVending::code_to_pos(string code)
-{
-	pair<int, int> posicion;
-	posicion.first = ((int)code[0] - (int)(char)'A' + 1);
-	code.erase(0, 1);
-	posicion.second = stoi(code);
-	return posicion;
-}
-
-void SnakVending::get_precios(istream & cin)
-{
-	for (int i = 0; i < num_filas; i++)
+	for (char letra = 'A'; letra <= letra_maxima; letra++)
 	{
-		precios.push_back(vector<int>());
 		for (int j = 0; j < num_columnas; j++)
 		{
+			string code;
+			code += letra;
+			code += to_string(j + 1);
 			int precio;
 			cin >> precio;
-			precios[i].push_back(precio);
+			productos[code] = Producto(precio);
 		}
 	}
+	for (char letra = 'A'; letra <= letra_maxima; letra++)
+	{
+		for (int j = 0; j < num_columnas; j++)
+		{
+			string code; int stock;
+			code += letra;
+			code += to_string(j + 1);
+			cin >> stock;
+			productos[code].strock = stock;
+		}
+	}
+
+}
+
+int SnakVending::revenue()
+{
+	int revenue = 0;
+	for (auto cliente : clientes)
+	{
+		if (productos[cliente].strock > 0) {
+			revenue += productos[cliente].precio;
+			productos[cliente].strock--;
+		}
+	}
+	return revenue;
+}
+
+int SnakVending::tiempo_entre_casillas()
+{
+	pair<char, int> posicion_actual = code_to_pos(inicio);
+	pair<char, int> objetivo = code_to_pos(llegada);
+	int dif_col = 0, dif_fil = 0, tiempo = -1;
+	do
+	{
+		if (dif_fil != 0)posicion_actual.first += dif_fil / abs(dif_fil);
+		if (dif_col != 0)posicion_actual.second += dif_col / abs(dif_col);
+
+		dif_fil = objetivo.first - posicion_actual.first;
+		dif_col = objetivo.second - posicion_actual.second;
+
+		tiempo++;
+
+	} while (dif_col != 0 || dif_fil != 0);
+	return tiempo;
+}
+
+pair<char, int> SnakVending::code_to_pos(string code)
+{
+	return pair<char, int>(*code.substr(0, 1).c_str(), stoi(code.substr(1, code.size())));
 }
 
 

@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pruebas", "Pruebas\Pruebas.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Snack Vendor", "Snack Vendor\Snack Vendor.vcxproj", "{4015F398-8A93-43EB-8244-E16BBDB50707}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DigitalBank", "DigitalBank\DigitalBank.vcxproj", "{83989088-D019-4BE4-AA8E-43FC7A4F72B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -133,6 +135,16 @@ Global
 		{4015F398-8A93-43EB-8244-E16BBDB50707}.Release|x64.Build.0 = Release|x64
 		{4015F398-8A93-43EB-8244-E16BBDB50707}.Release|x86.ActiveCfg = Release|Win32
 		{4015F398-8A93-43EB-8244-E16BBDB50707}.Release|x86.Build.0 = Release|Win32
+		{83989088-D019-4BE4-AA8E-43FC7A4F72B9}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{83989088-D019-4BE4-AA8E-43FC7A4F72B9}.Debug|x64.ActiveCfg = Debug|x64
+		{83989088-D019-4BE4-AA8E-43FC7A4F72B9}.Debug|x64.Build.0 = Debug|x64
+		{83989088-D019-4BE4-AA8E-43FC7A4F72B9}.Debug|x86.ActiveCfg = Debug|Win32
+		{83989088-D019-4BE4-AA8E-43FC7A4F72B9}.Debug|x86.Build.0 = Debug|Win32
+		{83989088-D019-4BE4-AA8E-43FC7A4F72B9}.Release|Any CPU.ActiveCfg = Release|Win32
+		{83989088-D019-4BE4-AA8E-43FC7A4F72B9}.Release|x64.ActiveCfg = Release|x64
+		{83989088-D019-4BE4-AA8E-43FC7A4F72B9}.Release|x64.Build.0 = Release|x64
+		{83989088-D019-4BE4-AA8E-43FC7A4F72B9}.Release|x86.ActiveCfg = Release|Win32
+		{83989088-D019-4BE4-AA8E-43FC7A4F72B9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
