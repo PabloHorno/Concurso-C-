@@ -89,6 +89,29 @@ int SnakVending::tiempo_entre_casillas()
 	int dif_col = 0, dif_fil = 0, tiempo = -1;
 	do
 	{
+		switch (fallo)
+		{
+		case 1:
+			if (dif_fil > 0 && dif_col > 0)
+				(dif_fil < dif_col)? dif_fil = 0: dif_col = 0;
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		case 7:
+			break;
+		case 8:
+			break;
+		default:
+			break;
+		}
 		if (dif_fil != 0)posicion_actual.first += dif_fil / abs(dif_fil);
 		if (dif_col != 0)posicion_actual.second += dif_col / abs(dif_col);
 
